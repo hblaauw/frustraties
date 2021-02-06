@@ -1,0 +1,16 @@
+---
+- hosts: asteria
+  remote_user: ansusr
+  become: true
+  become_user: hans
+  become_method: sudo
+  tasks:
+    - name: Stop VM Ares
+      shell: ~hans/bin/stp_ares
+    - name: Stop VM Hestia
+      shell: ~hans/bin/stp_hestia
+    - name: Stop VM Themis
+      shell: ~hans/bin/stp_themis
+    
+
+

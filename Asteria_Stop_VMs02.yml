@@ -1,0 +1,12 @@
+---
+- hosts: asteria
+  remote_user: ansusr
+  become: true
+  become_user: hans
+  become_method: sudo
+  tasks:
+    - name: Stop VM Ares
+      script: /home/hans/bin/stopares.sh
+    
+
+
