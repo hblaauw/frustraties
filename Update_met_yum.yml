@@ -1,0 +1,14 @@
+---
+- name: Update {{ servernaam }}.feggol.local
+  hosts: ' {{ servernaam }} '
+  remote_user: ansusr
+  become: true
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: upgrade alles
+      yum:
+       name: '*'
+       state: latest 
+
+
