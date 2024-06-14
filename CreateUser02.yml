@@ -1,0 +1,17 @@
+---
+- name: creer een test user
+  hosts: ceres
+  remote_user: ansusr
+  become: true
+  become_user: root
+  become_method: sudo
+  roles:
+    - name: users
+      user:
+        - username: frauantje      
+          name: frauantje
+          groups: ['adm','ansusr']
+          home: /home/frauantje
+    
+
+

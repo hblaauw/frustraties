@@ -1,0 +1,14 @@
+---
+- name: creer een test user
+  hosts: asteria
+  remote_user: ansusr
+  become: true
+  become_user: root
+  become_method: sudo
+  tasks:
+  - user:
+     name: demo02
+     state: absent
+     remove: yes    
+
+
