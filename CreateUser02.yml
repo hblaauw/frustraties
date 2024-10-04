@@ -1,6 +1,6 @@
 ---
 - name: creer een test user
-  hosts: ceres
+  hosts: athena
   remote_user: ansusr
   become: true
   become_user: root
