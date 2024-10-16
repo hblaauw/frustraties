@@ -1,0 +1,14 @@
+---
+- hosts: athena
+  tasks:
+  - name: hostname
+    debug:
+      var=ansible_hostname
+  - name: HW Info
+    vars:
+     msg: |
+      CPU Cores: "{{ ansible_processor_cores }}"
+      RAM Mem total mb: "{{ ansible_memtotal_mb }}"
+    debug:
+     msg: "{{ msg.split('\n') }}"
+
